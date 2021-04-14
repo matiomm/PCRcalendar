@@ -1347,22 +1347,22 @@ progress.reading-position::-moz-progress-bar {
                         .style('text-anchor','end')
                         .text(d3.format('.1~%')(data['p'+i]));
                 }
-                let aux = U_min - t_pcr;
-                for (let i = U_min - t_pcr; i<=0; i++){
-                    if (data['u'+(i-aux)]>0){
-                        let fecha = addDays(today,i);
-                        let id = '#d'+fecha.getDate()+'-'+(fecha.getMonth()+1)+'-'+fecha.getFullYear();
-                        d3.select(id).append('text')
-                            .attr('class','numCal')
-                            .attr('x',ancho*0.04)
-                            .attr('y',alto*0.9)
-                            .attr('fill','#dc3545')
-                            .style('font-weight','bold')
-                            .style('font-size',alto/6)
-                            .style('text-anchor','start')
-                            .text(d3.format('.1~%')(data['u'+(i-aux)]));
-                    }
-                }
+                // let aux = U_min - t_pcr;
+                // for (let i = U_min - t_pcr; i<=0; i++){
+                //     if (data['u'+(i-aux)]>0){
+                //         let fecha = addDays(today,i);
+                //         let id = '#d'+fecha.getDate()+'-'+(fecha.getMonth()+1)+'-'+fecha.getFullYear();
+                //         d3.select(id).append('text')
+                //             .attr('class','numCal')
+                //             .attr('x',ancho*0.04)
+                //             .attr('y',alto*0.9)
+                //             .attr('fill','#dc3545')
+                //             .style('font-weight','bold')
+                //             .style('font-size',alto/6)
+                //             .style('text-anchor','start')
+                //             .text(d3.format('.1~%')(data['u'+(i-aux)]));
+                //     }
+                // }
 
             }
 
